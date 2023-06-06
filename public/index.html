@@ -7,24 +7,24 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    <h2>Список пользователей</h2>
+    <h2>List of users</h2>
     <form name="userForm">
         <input type="hidden" name="id" value="0" />
         <div class="form-group">
-            <label for="name">Имя:</label>
+            <label for="name">Name:</label>
             <input class="form-control" name="name" />
         </div>
         <div class="form-group">
-            <label for="age">Возраст:</label>
+            <label for="age">Age:</label>
             <input class="form-control" name="age" />
         </div>
         <div class="panel-body">
-            <button type="submit" class="btn btn-sm btn-primary">Сохранить</button>
-            <a id="reset" class="btn btn-sm btn-primary">Сбросить</a>
+            <button type="submit" class="btn btn-sm btn-primary">Save</button>
+            <a id="reset" class="btn btn-sm btn-primary">Clear</a>
         </div>
     </form>
     <table class="table table-condensed table-striped table-bordered">
-        <thead><tr><th>Id</th><th>Имя</th><th>возраст</th><th></th></tr></thead>
+        <thead><tr><th>Id</th><th>Name</th><th>Age</th><th></th></tr></thead>
         <tbody>
         </tbody>
     </table>
@@ -137,7 +137,7 @@
             const editLink = document.createElement("a");
             editLink.setAttribute("data-id", user.id);
             editLink.setAttribute("style", "cursor:pointer;padding:15px;");
-            editLink.append("Изменить");
+            editLink.append("Change");
             editLink.addEventListener("click", e => {
   
                 e.preventDefault();
@@ -148,7 +148,7 @@
             const removeLink = document.createElement("a");
             removeLink.setAttribute("data-id", user.id);
             removeLink.setAttribute("style", "cursor:pointer;padding:15px;");
-            removeLink.append("Удалить");
+            removeLink.append("Delete");
             removeLink.addEventListener("click", e => {
   
                 e.preventDefault();
