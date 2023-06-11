@@ -13,6 +13,8 @@ async function run() {
         const collection = db.collection("users");
         console.log(`В коллекции users ${await collection.countDocuments()} документов`);
 
+        await collection.insertOne(users[0]);
+
     } catch (err) {
         console.log(err);
     } finally {
