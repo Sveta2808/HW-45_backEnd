@@ -12,13 +12,13 @@ const connection = mysql.createConnection({
       return console.error("Error: " + err.message);
     }
     else{
-      console.log("Подключение к серверу MySQL успешно установлено");
+      console.log("The connection to the MySQL server was successfully established");
     }
  });
  
  connection.end(function(err) {
   if (err) {
-    return console.log("Ошибка: " + err.message);
+    return console.log("Error: " + err.message);
   }
-  console.log("Подключение закрыто");
+  console.log("Connection is over");
 });
